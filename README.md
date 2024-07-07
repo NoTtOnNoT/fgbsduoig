@@ -38,4 +38,42 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+import 'package:flutter/material.dart';
+
+class LoginPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Login'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Login to your account',
+              style: TextStyle(fontSize: 20),
+            ),
+            SizedBox(height: 20),
+            TextFormField(
+              decoration: InputDecoration(labelText: 'Username'),
+            ),
+            TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(labelText: 'Password'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Add login authentication logic here
+              },
+              child: Text('Login'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 flutter run
